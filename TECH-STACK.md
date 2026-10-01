@@ -50,27 +50,29 @@ This is what happens when the owner adds a piece.
 ```mermaid
 sequenceDiagram
     actor Owner
-    participant CMS as Sveltia CMS (in the browser)
-    participant GH as GitHub repository
-    participant CF as Cloudflare Workers Builds
+    participant CMS as Sveltia CMS
+    participant GH as GitHub
+    participant CF as Cloudflare build
     participant Site as Live site
 
-    Owner->>CMS: Fills in the product form and adds photos
-    CMS->>CMS: Shrinks each photo before upload
+    Owner->>CMS: Fills in the form, adds photos
+    CMS->>CMS: Shrinks each photo
     Owner->>CMS: Taps Save
-    CMS->>GH: One commit with the product file and its photos
-    GH->>CF: Notifies Cloudflare of the new commit
-    CF->>CF: Installs dependencies, then runs the Astro build
-    Note over CF: Astro checks every product against the schema,<br/>builds the pages and makes resized images
+    CMS->>GH: One commit: product and photos
+    GH->>CF: New commit
+    CF->>CF: Install, then Astro build
+    Note over CF: Astro validates every product,<br/>builds pages, resizes images
     alt Build succeeds
-        CF->>Site: Deploys the new version
-        CF-->>GH: Marks the commit as passed
-        Site-->>Owner: The piece is live, about a minute after Save
+        CF->>Site: Deploys
+        CF-->>GH: Commit marked passed
+        Site-->>Owner: Live in about a minute
     else Build fails
-        CF-->>GH: Marks the commit as failed
-        Note over Site: The previous version stays online
+        CF-->>GH: Commit marked failed
+        Note over Site: Previous version<br/>stays online
     end
 ```
+
+The diagram shortens two steps. "Install, then Astro build" is Cloudflare installing the dependencies and running the build. "Code plus the secret" in the next diagram is the Auth Worker exchanging GitHub's one-time code for an access token, using a client secret held in Cloudflare.
 
 Three details in that flow matter more than they look:
 
@@ -89,16 +91,16 @@ sequenceDiagram
     participant Auth as Auth Worker
     participant GH as GitHub
 
-    Owner->>CMS: Opens /admin/ and taps Sign in with GitHub
+    Owner->>CMS: Taps Sign in with GitHub
     CMS->>Auth: Starts the sign-in
-    Auth->>GH: Redirects to GitHub's sign-in page
+    Auth->>GH: Redirects to GitHub
     Owner->>GH: Signs in and approves
-    GH->>Auth: Returns a one-time code
-    Auth->>GH: Exchanges the code, using a secret held in Cloudflare
+    GH->>Auth: One-time code
+    Auth->>GH: Code plus the secret
     GH->>Auth: Access token
-    Auth->>CMS: Passes the token to the browser
-    CMS->>GH: Reads and writes the repository as the owner
-    Note over CMS,GH: GitHub refuses the write if the account<br/>is not a collaborator on the repository
+    Auth->>CMS: Token to the browser
+    CMS->>GH: Reads and writes as the owner
+    Note over CMS,GH: GitHub refuses any account that is<br/>not a collaborator on the repository
 ```
 
 | Who | Access | What they can do |
