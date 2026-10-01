@@ -46,7 +46,7 @@ I did this with Claude Code, Anthropic's AI coding tool, as my pair programmer. 
 
 Astro builds the site as plain HTML with resized images and self-hosted fonts. Sveltia CMS provides the admin: it runs in the browser and saves each change as a commit to a private GitHub repository. Cloudflare Workers hosts the site and rebuilds it on every commit, in about a minute. A second small Worker handles "Sign in with GitHub" for the admin. There is no database and no server to maintain.
 
-**[See how the parts work together, with diagrams →](TECH-STACK.md)**
+**[See how the parts work together →](TECH-STACK.md)**
 
 ## About this repository
 
