@@ -43,7 +43,7 @@ Shopify does much more than that, charges for it every month, and its core featu
 I took those requirements to Claude Code and worked through the options. The design we arrived at has four parts and no moving ones.
 
 ```mermaid
-flowchart LR
+flowchart TD
     owner["Owner's phone"] -->|adds or edits a piece| admin["Admin page<br/>(Sveltia CMS)"]
     admin -->|signs in through| auth["Auth Worker<br/>(GitHub sign-in)"]
     admin -->|each save is a commit| repo["Private GitHub<br/>repository"]
