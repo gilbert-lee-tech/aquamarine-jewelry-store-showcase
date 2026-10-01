@@ -14,32 +14,9 @@ The catalog has no server and no database. Four tools pass the work along: the o
 
 ## How they connect
 
-```mermaid
-flowchart TD
-    subgraph phone["Owner's phone"]
-        admin["Admin page at /admin/<br/>Sveltia CMS"]
-    end
-    subgraph github["GitHub"]
-        repo["Private repository<br/>code, products, photos"]
-        login["GitHub sign-in"]
-    end
-    subgraph cloudflare["Cloudflare"]
-        auth["Auth Worker"]
-        builds["Workers Builds<br/>runs the Astro build"]
-        site["Site Worker<br/>static files"]
-    end
-    visitor["Visitor's browser"]
+![How the shop gets published: owner, Sveltia CMS admin page, GitHub repository, Cloudflare build running Astro, live site, visitor](docs/images/how-it-connects.svg)
 
-    admin -->|1 sign in| auth
-    auth -->|2 hands over to| login
-    login -->|3 access token| admin
-    admin -->|4 save = commit| repo
-    repo -->|5 new commit| builds
-    builds -->|6 deploys| site
-    builds -.->|build result| repo
-    site -->|pages and photos| visitor
-    site -->|serves the admin page| admin
-```
+Read it top to bottom. The numbered steps are the path every change takes; the notes on the right are the three things that sit beside that path.
 
 The admin page is part of the site itself: one static HTML file that loads Sveltia CMS. Nothing about it is private except what it can do once someone has signed in.
 

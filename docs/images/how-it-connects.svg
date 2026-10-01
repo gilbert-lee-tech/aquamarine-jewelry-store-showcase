@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 850" width="920" height="850" role="img" aria-labelledby="t d" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title id="t">How the shop gets published</title>
+  <desc id="d">The shop owner signs in to the admin page, which is Sveltia CMS. Saving makes one commit in a private GitHub repository. A new commit starts a Cloudflare build that runs Astro. The build deploys the live site in about a minute, and visitors browse it. Sign-in goes through GitHub, so only collaborators on the repository can save.</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#1f2a30"/>
+    </marker>
+    <marker id="arrow-soft" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#6b7a80"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="918" height="848" rx="14" fill="#ffffff" stroke="#d8dee0"/>
+
+  <!-- The main path, top to bottom -->
+  <g fill="none" stroke="#1f2a30" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M300 72v58"/>
+    <path d="M300 232v58"/>
+    <path d="M300 392v58"/>
+    <path d="M300 552v58"/>
+    <path d="M300 712v58"/>
+  </g>
+
+  <!-- People -->
+  <g font-size="15" font-weight="600" fill="#1f2a30" text-anchor="middle">
+    <rect x="170" y="28" width="260" height="44" rx="22" fill="#eef2f3" stroke="#c5cfd2"/>
+    <text x="300" y="55">Shop owner, on a phone</text>
+    <rect x="170" y="772" width="260" height="44" rx="22" fill="#eef2f3" stroke="#c5cfd2"/>
+    <text x="300" y="799">Visitor</text>
+  </g>
+
+  <!-- Step labels on the arrows -->
+  <g font-size="14" fill="#1f2a30">
+    <g><circle cx="300" cy="100" r="13" fill="#1f2a30"/><text x="300" y="105" text-anchor="middle" fill="#fff" font-weight="700">1</text><text x="324" y="105">Opens the admin page and signs in</text></g>
+    <g><circle cx="300" cy="260" r="13" fill="#1f2a30"/><text x="300" y="265" text-anchor="middle" fill="#fff" font-weight="700">2</text><text x="324" y="265">Saving a product makes one commit</text></g>
+    <g><circle cx="300" cy="420" r="13" fill="#1f2a30"/><text x="300" y="425" text-anchor="middle" fill="#fff" font-weight="700">3</text><text x="324" y="425">A new commit starts a build</text></g>
+    <g><circle cx="300" cy="580" r="13" fill="#1f2a30"/><text x="300" y="585" text-anchor="middle" fill="#fff" font-weight="700">4</text><text x="324" y="585">The build deploys in about a minute</text></g>
+    <g><circle cx="300" cy="740" r="13" fill="#1f2a30"/><text x="300" y="745" text-anchor="middle" fill="#fff" font-weight="700">5</text><text x="324" y="745">Visitors browse, then message the owner to buy</text></g>
+  </g>
+
+  <!-- The four tools -->
+  <g>
+    <rect x="40" y="132" width="520" height="100" rx="10" fill="#f0fbf9" stroke="#0f766e" stroke-width="1.5"/>
+    <rect x="40" y="132" width="10" height="100" rx="5" fill="#0f766e"/>
+    <text x="66" y="158" font-size="12" font-weight="700" letter-spacing="1.5" fill="#0f766e">SVELTIA CMS</text>
+    <text x="66" y="184" font-size="19" font-weight="700" fill="#1f2a30">Admin page</text>
+    <text x="66" y="208" font-size="14" fill="#3f4d53">A form for products and shop details. It runs in the browser.</text>
+  </g>
+  <g>
+    <rect x="40" y="292" width="520" height="100" rx="10" fill="#f4f5f6" stroke="#24292f" stroke-width="1.5"/>
+    <rect x="40" y="292" width="10" height="100" rx="5" fill="#24292f"/>
+    <text x="66" y="318" font-size="12" font-weight="700" letter-spacing="1.5" fill="#24292f">GITHUB</text>
+    <text x="66" y="344" font-size="19" font-weight="700" fill="#1f2a30">Private repository</text>
+    <text x="66" y="368" font-size="14" fill="#3f4d53">The code, every product and its photos. Each change is recorded.</text>
+  </g>
+  <g>
+    <rect x="40" y="452" width="520" height="100" rx="10" fill="#fff6ee" stroke="#c2410c" stroke-width="1.5"/>
+    <rect x="40" y="452" width="10" height="100" rx="5" fill="#c2410c"/>
+    <text x="66" y="478" font-size="12" font-weight="700" letter-spacing="1.5"><tspan fill="#c2410c">CLOUDFLARE</tspan><tspan fill="#6b7a80">  runs  </tspan><tspan fill="#6d28d9">ASTRO</tspan></text>
+    <text x="66" y="504" font-size="19" font-weight="700" fill="#1f2a30">Build</text>
+    <text x="66" y="528" font-size="14" fill="#3f4d53">Astro checks every product, builds the pages and resizes the photos.</text>
+  </g>
+  <g>
+    <rect x="40" y="612" width="520" height="100" rx="10" fill="#fff6ee" stroke="#c2410c" stroke-width="1.5"/>
+    <rect x="40" y="612" width="10" height="100" rx="5" fill="#c2410c"/>
+    <text x="66" y="638" font-size="12" font-weight="700" letter-spacing="1.5" fill="#c2410c">CLOUDFLARE</text>
+    <text x="66" y="664" font-size="19" font-weight="700" fill="#1f2a30">Live site</text>
+    <text x="66" y="688" font-size="14" fill="#3f4d53">Plain files. Nothing runs when a visitor opens a page.</text>
+  </g>
+
+  <!-- Side notes -->
+  <g fill="none" stroke="#6b7a80" stroke-width="1.5" stroke-dasharray="5 5">
+    <path d="M560 182h44"/>
+    <path d="M560 502h30v-160h-30" marker-end="url(#arrow-soft)"/>
+  </g>
+
+  <g>
+    <rect x="604" y="124" width="276" height="116" rx="10" fill="#ffffff" stroke="#6b7a80" stroke-dasharray="5 5"/>
+    <text x="620" y="150" font-size="12" font-weight="700" letter-spacing="1.5" fill="#3f4d53">ADMIN CONTROL</text>
+    <text font-size="14" fill="#1f2a30">
+      <tspan x="620" y="174" font-weight="700">Sign in with GitHub</tspan>
+      <tspan x="620" y="196" fill="#3f4d53">A small Auth Worker hands the</tspan>
+      <tspan x="620" y="214" fill="#3f4d53">sign-in to GitHub. Only people added</tspan>
+      <tspan x="620" y="232" fill="#3f4d53">to the repository can save.</tspan>
+    </text>
+  </g>
+
+  <g font-size="14" fill="#3f4d53">
+    <text><tspan x="608" y="398" font-weight="700" fill="#1f2a30">Pass or fail goes back</tspan>
+      <tspan x="608" y="418">to the commit. If a build fails,</tspan>
+      <tspan x="608" y="436">the live site does not change.</tspan></text>
+    <text><tspan x="608" y="652" font-weight="700" fill="#1f2a30">Also serves the admin page</tspan>
+      <tspan x="608" y="672">The admin is one file on the</tspan>
+      <tspan x="608" y="690">same site, at /admin/.</tspan></text>
+  </g>
+  <path d="M560 662h36" fill="none" stroke="#6b7a80" stroke-width="1.5" stroke-dasharray="5 5"/>
+</svg>
