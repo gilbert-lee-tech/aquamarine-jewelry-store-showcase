@@ -8,9 +8,9 @@ A product catalog for a small shop that sells handmade, one-of-a-kind crystal je
 
 This project did not end where it started. I first built the shop on Shopify. A conversation with the owner showed that Shopify answered a question nobody had asked, so I went back to what the shop needs and worked out a different design with an AI pair programmer.
 
-| Proof of concept | Final site |
-|---|---|
-| ![The first catalog proof of concept on a phone](docs/images/proof-of-concept-phone.jpg) | ![The finished site on a phone](docs/images/final-home-phone.jpg) |
+| Shopify store | Proof of concept | Final site |
+|---|---|---|
+| ![The Shopify store on a phone](docs/images/shopify-home-phone.jpg) | ![The first catalog proof of concept on a phone](docs/images/proof-of-concept-phone.jpg) | ![The finished site on a phone](docs/images/final-home-phone.jpg) |
 
 1. **A Shopify store.** A stock theme and 239 products imported from the shop's Instagram history.
 2. **A conversation with the owner.** Every piece is made once and sold once. The shop needs a lasting record of its work, without a monthly bill.

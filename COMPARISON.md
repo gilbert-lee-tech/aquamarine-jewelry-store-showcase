@@ -10,6 +10,15 @@ The shop was built twice: first as a Shopify store, then as a static catalog. Th
 - The owner updates the shop from a phone.
 - The running cost should be close to zero.
 
+## The same shop, two product pages
+
+| Shopify store | Catalog |
+|---|---|
+| ![Product page on the Shopify store](docs/images/shopify-product-phone.jpg) | ![Product page on the catalog](docs/images/final-product-phone.jpg) |
+| A quantity field, "Add to cart" and "Buy it now". | "Message on Instagram", "Message on Facebook" and "Share". |
+
+The Shopify page shows an imported piece; the catalog page shows a sample piece.
+
 ## Side by side
 
 | | Shopify store | Catalog |
@@ -18,7 +27,7 @@ The shop was built twice: first as a Shopify store, then as a static catalog. Th
 | Monthly cost | A subscription once the store goes live | None on the free tiers of GitHub and Cloudflare |
 | Buying | Cart, checkout and payments | "Message on Instagram" and "Message on Facebook" buttons |
 | Inventory | Stock counts per product | Not needed: a piece is Available, Sold or Hidden |
-| A piece after it sells | Shown as sold out, as long as the owner keeps it listed | Stays by design, with a Sold badge, its photos and its description |
+| A piece after it sells | In this store, sold pieces carried "SOLD" in the title and showed a price of $0.00 | Stays by design, with a Sold badge, its photos and its description |
 | Photos per piece | Many | As many as the owner adds |
 | Missing price | A product needs a price; the imported ones without one showed as blank or zero | Shows "Message for price" |
 | Adding a piece | Shopify admin or app | A form at `/admin/` in the phone's browser |

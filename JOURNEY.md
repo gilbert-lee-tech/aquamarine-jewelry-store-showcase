@@ -11,7 +11,17 @@ The brief sounded like e-commerce: a jewelry shop that wants to sell online. So 
 - A standard category on every product, and five automatic collections built from those categories: Bracelets, Rings, Earrings, Necklaces and Jewelry Sets.
 - Prices pulled from the original Instagram captions where a caption had one. That covered 79 products; **160 had no price**.
 
-It worked as a store. The 160 missing prices were the first sign that the shop does not run like a store with a price list.
+| Home | A collection | A product |
+|---|---|---|
+| ![Shopify store home page](docs/images/shopify-home-phone.jpg) | ![Shopify store, Bracelets collection](docs/images/shopify-collection-phone.jpg) | ![Shopify store product page](docs/images/shopify-product-phone.jpg) |
+
+It worked as a store, and the screenshots show where it did not fit:
+
+- **The titles are Instagram captions.** They start with a price ("$20 CAD Smoky Quartz & Citrine…") because that is how the piece was posted, not how a store names a product.
+- **Sold pieces show as "$0.00 CAD".** The collection page lists pieces titled "SOLD…" with a zero price, because a store has no natural place for a one-of-a-kind piece that is gone.
+- **The product page asks for a quantity** and offers "Add to cart" and "Buy it now", for a piece that exists once and is bought in a chat.
+
+The 160 missing prices were the same signal in the data: the shop does not run like a store with a price list.
 
 ## 2. The conversation that changed the brief
 
