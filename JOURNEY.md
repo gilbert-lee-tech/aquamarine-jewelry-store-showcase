@@ -65,7 +65,7 @@ The first version was a proof of concept inside the Shopify theme's repository, 
 
 The proof of concept already had the features of the final site: categories, product pages, the Sold badge and the admin. It looked like a default template, which is what the next step fixed.
 
-More detail: **[Shopify versus the catalog →](COMPARISON.md)**
+More detail: **[How the parts work together →](TECH-STACK.md)** and **[Shopify versus the catalog →](COMPARISON.md)**
 
 ## 4. Six designs and one choice
 
