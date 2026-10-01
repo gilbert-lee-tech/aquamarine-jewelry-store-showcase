@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 850" width="920" height="850" role="img" aria-labelledby="t d" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
   <title id="t">How the shop gets published</title>
-  <desc id="d">The shop owner signs in to the admin page, which is Sveltia CMS. Saving makes one commit in a private GitHub repository. A new commit starts a Cloudflare build that runs Astro. The build deploys the live site in about a minute, and visitors browse it. Sign-in goes through GitHub, so only collaborators on the repository can save.</desc>
+  <desc id="d">The shop owner signs in to the admin page, which is Sveltia CMS running in the owner's browser. Saving makes one commit in a private GitHub repository. A new commit starts a Cloudflare build that runs Astro. The build deploys the live site in about a minute, and visitors browse it. Sign-in goes through GitHub, so only collaborators on the repository can save.</desc>
 
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
@@ -43,9 +43,9 @@
   <g>
     <rect x="40" y="132" width="520" height="100" rx="10" fill="#f0fbf9" stroke="#0f766e" stroke-width="1.5"/>
     <rect x="40" y="132" width="10" height="100" rx="5" fill="#0f766e"/>
-    <text x="66" y="158" font-size="12" font-weight="700" letter-spacing="1.5" fill="#0f766e">SVELTIA CMS</text>
-    <text x="66" y="184" font-size="19" font-weight="700" fill="#1f2a30">Admin page</text>
-    <text x="66" y="208" font-size="14" fill="#3f4d53">A form for products and shop details. It runs in the browser.</text>
+    <text x="66" y="158" font-size="12" font-weight="700" letter-spacing="1.5" fill="#0f766e">RUNS IN THE OWNER'S BROWSER</text>
+    <text x="66" y="184" font-size="19" font-weight="700" fill="#1f2a30">Admin page (Sveltia CMS)</text>
+    <text x="66" y="208" font-size="14" fill="#3f4d53">An editing app for products and shop details. It writes straight to GitHub.</text>
   </g>
   <g>
     <rect x="40" y="292" width="520" height="100" rx="10" fill="#f4f5f6" stroke="#24292f" stroke-width="1.5"/>
@@ -66,23 +66,24 @@
     <rect x="40" y="612" width="10" height="100" rx="5" fill="#c2410c"/>
     <text x="66" y="638" font-size="12" font-weight="700" letter-spacing="1.5" fill="#c2410c">CLOUDFLARE</text>
     <text x="66" y="664" font-size="19" font-weight="700" fill="#1f2a30">Live site</text>
-    <text x="66" y="688" font-size="14" fill="#3f4d53">Plain files. Nothing runs when a visitor opens a page.</text>
+    <text x="66" y="688" font-size="14" fill="#3f4d53">Plain files, including the admin page. Nothing runs when a page is opened.</text>
   </g>
 
   <!-- Side notes -->
   <g fill="none" stroke="#6b7a80" stroke-width="1.5" stroke-dasharray="5 5">
-    <path d="M560 182h44"/>
+    <path d="M560 170h44"/>
+    <path d="M560 216h22v62h22"/>
     <path d="M560 502h30v-160h-30" marker-end="url(#arrow-soft)"/>
   </g>
 
   <g>
-    <rect x="604" y="124" width="276" height="116" rx="10" fill="#ffffff" stroke="#6b7a80" stroke-dasharray="5 5"/>
-    <text x="620" y="150" font-size="12" font-weight="700" letter-spacing="1.5" fill="#3f4d53">ADMIN CONTROL</text>
+    <rect x="604" y="112" width="276" height="116" rx="10" fill="#ffffff" stroke="#6b7a80" stroke-dasharray="5 5"/>
+    <text x="620" y="138" font-size="12" font-weight="700" letter-spacing="1.5" fill="#3f4d53">ADMIN CONTROL</text>
     <text font-size="14" fill="#1f2a30">
-      <tspan x="620" y="174" font-weight="700">Sign in with GitHub</tspan>
-      <tspan x="620" y="196" fill="#3f4d53">A small Auth Worker hands the</tspan>
-      <tspan x="620" y="214" fill="#3f4d53">sign-in to GitHub. Only people added</tspan>
-      <tspan x="620" y="232" fill="#3f4d53">to the repository can save.</tspan>
+      <tspan x="620" y="162" font-weight="700">Sign in with GitHub</tspan>
+      <tspan x="620" y="184" fill="#3f4d53">A small Auth Worker hands the</tspan>
+      <tspan x="620" y="202" fill="#3f4d53">sign-in to GitHub. Only people added</tspan>
+      <tspan x="620" y="220" fill="#3f4d53">to the repository can save.</tspan>
     </text>
   </g>
 
@@ -90,9 +91,8 @@
     <text><tspan x="608" y="398" font-weight="700" fill="#1f2a30">Pass or fail goes back</tspan>
       <tspan x="608" y="418">to the commit. If a build fails,</tspan>
       <tspan x="608" y="436">the live site does not change.</tspan></text>
-    <text><tspan x="608" y="652" font-weight="700" fill="#1f2a30">Also serves the admin page</tspan>
-      <tspan x="608" y="672">The admin is one file on the</tspan>
-      <tspan x="608" y="690">same site, at /admin/.</tspan></text>
+    <text><tspan x="612" y="274" font-weight="700" fill="#1f2a30">Loaded from the live site</tspan>
+      <tspan x="612" y="294">The admin page is one file on the</tspan>
+      <tspan x="612" y="312">same site, at /admin/.</tspan></text>
   </g>
-  <path d="M560 662h36" fill="none" stroke="#6b7a80" stroke-width="1.5" stroke-dasharray="5 5"/>
 </svg>
