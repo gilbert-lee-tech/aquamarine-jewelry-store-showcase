@@ -2,7 +2,7 @@
 
 A product catalog for a small shop that sells handmade, one-of-a-kind crystal jewelry. Visitors browse the pieces, then message the owner on Instagram or Facebook to buy. There is no checkout. The owner adds and edits pieces from a phone, and every piece keeps its page after it sells.
 
-**See it live:** https://aquamarine-jewelry-store.gilbert-lee-tech.workers.dev (it shows sample pieces until the owner has added the real ones)
+**See it live:** https://aquamarine-jewelry-store.gilbert-lee-tech.workers.dev (the owner has removed the sample pieces and is adding the real ones)
 
 ## From an idea to a product
 
@@ -17,6 +17,7 @@ This project did not end where it started. I first built the shop on Shopify. A 
 3. **A new architecture, worked out with AI.** A static catalog, an admin that works from a phone, and free hosting. No database and no checkout.
 4. **Six designs to choose from.** The owner picked one, then asked for it in dark mode only.
 5. **Handover.** A logo, an owner's guide in English and Chinese, and a tagged first release.
+6. **After launch.** Three changes the owner asked for, live within a day and a half.
 
 **[Read the full journey →](JOURNEY.md)**
 
@@ -37,6 +38,18 @@ I did this with Claude Code, Anthropic's AI coding tool, as my pair programmer. 
 - Six design prototypes and six logos in one evening, with the chosen design live the same night.
 
 **[See how I worked, and what went wrong along the way →](AI-WORKFLOW.md)**
+
+## After launch: feedback to live in hours
+
+| Before | After |
+|---|---|
+| <img src="docs/images/admin-photos-list-phone.jpg" alt="The admin's Photos field on a phone as a tall list" width="260"> | <img src="docs/images/admin-photos-grid-phone.jpg" alt="The same photos as a grid, three across, with move arrows" width="260"> |
+
+The owner started using the site and came back with requests: add several photos at once, tag each piece with its crystals, and make photos easier to put in order on a phone. All three were live a day and a half after the first release.
+
+What made that possible is a small pipeline. A second copy of the site builds from a `dev` branch, with its own working admin. I try a change there on a phone, show the owner, and merge it through a pull request once the owner is happy. Every build is automatic and takes about a minute.
+
+**[See the three changes and the pipeline →](AFTER-LAUNCH.md)**
 
 ## Shopify versus the catalog
 

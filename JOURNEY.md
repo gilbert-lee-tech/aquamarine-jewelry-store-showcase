@@ -106,7 +106,13 @@ The chosen design went from prototype to the live site the same evening. The las
 - **A phone check by measurement.** The home, category, list and product pages were loaded at 320, 360 and 390 pixels wide to confirm that nothing scrolls sideways and every tap target is tall enough for a thumb.
 - **An owner's guide** in English and Chinese: signing in, adding a piece, photos, marking a piece sold, sharing a link.
 
-The site in the screenshots shows sample pieces. The owner replaces them with real ones through the admin.
+The site in the screenshots shows sample pieces. The owner has since removed them and is adding the real ones through the admin.
+
+## 6. After launch
+
+The owner started using the site and came back with requests. Three changes went live in the day and a half after the first release: several photos at once, crystals with a filter on each category page, and a photo grid that makes reordering easier on a phone. Each one went through a pull request, and from the second one on, through a second copy of the site where it could be tried first.
+
+The changes, and the pipeline behind them: **[After launch →](AFTER-LAUNCH.md)**
 
 ## What I took from it
 

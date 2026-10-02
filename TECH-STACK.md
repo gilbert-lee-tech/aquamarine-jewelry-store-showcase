@@ -54,7 +54,7 @@ The diagram shortens two steps. "Install, then Astro build" is Cloudflare instal
 Three details in that flow matter more than they look:
 
 - **A save is a commit.** Sveltia CMS writes to the repository through GitHub's API from the browser. There is no backend of mine in between, so there is nothing of mine to keep running.
-- **The build is the gatekeeper.** Astro validates every product against a schema: a product needs a name, a status must be one of three values, every photo needs a description. Bad content fails the build and never reaches visitors.
+- **The build is the gatekeeper.** Astro validates every product against a schema: a product needs a name, a status must be one of three values, every photo must be a real image file. Bad content fails the build and never reaches visitors.
 - **Photos are handled twice.** The admin shrinks a phone photo in the browser before committing it, so the repository stays small. The build then makes several smaller copies of each photo, and a visitor's phone downloads only the size it needs.
 
 ## Admin control: who can change the shop
@@ -105,6 +105,16 @@ What that gives the shop:
 - **A sitemap** for search engines.
 
 The result is a folder of plain files. Cloudflare serves that folder; no code runs when a visitor opens a page.
+
+## Two sites: live and dev
+
+Since the first release there is a second Cloudflare Worker. It builds a `dev` branch to its own address, so a change can be tried on a phone before it reaches the shop.
+
+- **The same admin, a different branch.** The admin page checks the address it was opened from. On the dev site it reads and saves the `dev` branch; anywhere else it uses `main`. One file serves both, so nothing has to be changed when `dev` is merged.
+- **One door to the live site.** My changes reach `main` through a pull request. The owner's saves in the live admin still commit straight to `main`.
+- **Both builds report back.** Each Worker marks the commit it built as passed or failed on GitHub.
+
+How this was used for the first changes after launch: **[After launch →](AFTER-LAUNCH.md)**
 
 ## What it costs to run
 

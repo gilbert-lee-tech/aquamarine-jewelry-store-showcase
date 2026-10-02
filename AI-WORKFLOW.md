@@ -50,6 +50,23 @@ The mistakes are the most useful part of this page.
 
 Two habits made these cheap to fix. Claude Code said plainly what it had not verified, such as how the site renders on a real phone or what the admin's buttons are called. And every deploy was confirmed twice: by the build result that Cloudflare reports to GitHub, and by loading the live pages.
 
+## After the first release
+
+The numbers above stop at the first release. In the day and a half after it, the owner asked for three changes and all three went live. This is the same count for that period, from the catalog's repository.
+
+| | |
+|---|---|
+| Changes requested by the owner and shipped | 3, each through a pull request |
+| Commits on the live branch | 36 |
+| Made by the admin when a product or setting was saved | 22 |
+| Co-authored with Claude | 6 |
+| Merge commits (pull requests, and keeping the `dev` branch up to date) | 8 |
+| Release tags added | 2 |
+
+Two things changed in how I worked. Claude Code now works on a `dev` branch that builds to its own copy of the site, and nothing reaches the live site without a pull request that I review. And two rules were added along the way: a pull request never contains a product, and the live branch is tagged before every pull request.
+
+What went wrong in that period, including a test product that ended up in a pull request: **[After launch →](AFTER-LAUNCH.md)**
+
 ## What I would tell another developer
 
 - **Give it real reference material.** Three screenshots of the shop's own listings did more for the designs than any adjectives I could have written.
