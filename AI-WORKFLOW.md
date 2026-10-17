@@ -67,6 +67,23 @@ Two things changed in how I worked. Claude Code now works on a `dev` branch that
 
 What went wrong in that period, including a test product that ended up in a pull request: **[After launch →](AFTER-LAUNCH.md)**
 
+### The two weeks after that
+
+The same count from October 2 to October 16, when the owner filled the shop and the requests kept coming.
+
+| | |
+|---|---|
+| Pull requests into the live branch | 10: six features and four fixes |
+| Commits on the live branch | 265 |
+| Made by the admin when a product or setting was saved | 206, of which 196 by the owner |
+| Co-authored with Claude | 22 |
+| Merge commits (pull requests, and keeping the `dev` branch up to date) | 35 |
+| Release tags added | 10 |
+
+Most of the commits are the owner's, which is the point of the admin: the owner added and edited 69 pieces from a phone without waiting for me. Each fix also left a lesson behind, from "a field left empty must never stop the build" to reading a build log, not just its result.
+
+The features, and how the builds went from 20 minutes back to under one: **[Two more weeks →](MORE-CHANGES.md)**
+
 ## What I would tell another developer
 
 - **Give it real reference material.** Three screenshots of the shop's own listings did more for the designs than any adjectives I could have written.

@@ -114,6 +114,8 @@ The owner started using the site and came back with requests. Three changes went
 
 The changes, and the pipeline behind them: **[After launch →](AFTER-LAUNCH.md)**
 
+In the two weeks after that, four more features followed: choosing each photo's crop, the shop and the admin as phone apps, a Sale option, and two links to Facebook Marketplace. The growing catalog also slowed every build from one minute to twenty, until the build logs showed why. **[Two more weeks →](MORE-CHANGES.md)**
+
 ## What I took from it
 
 - **Ask what the record is for before choosing the platform.** "Sell online" was my reading of the brief. "Keep a record of each piece" was the actual need.

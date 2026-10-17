@@ -122,4 +122,6 @@ In the same period the owner made 17 saves in the live admin, including removing
 
 ---
 
+What came next, and how builds slowed down as the catalog grew: [Two more weeks →](MORE-CHANGES.md)
+
 The source code and the shop's content are kept in a private repository. Back to the [README](README.md).

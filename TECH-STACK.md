@@ -122,7 +122,7 @@ The site uses the free tiers of GitHub and Cloudflare, and both tools are open s
 
 ## Limits worth knowing
 
-- **Every save rebuilds the whole site.** That takes about a minute today and will take longer as the catalog grows.
+- **Every save rebuilds the whole site.** Pages are cheap; photos are not. Resized photos are kept between builds, so a save takes under a minute and each new photo adds about a second. Builds once grew to 20 minutes before that was fixed: see [Two more weeks](MORE-CHANGES.md#5-a-build-that-grew-from-one-minute-to-twenty). After seven days without a build the saved photos expire, and the next build resizes them all once.
 - **Each editor needs a GitHub account.** That is one extra step for a shop owner who has never used GitHub.
 - **The admin loads Sveltia CMS from a public CDN.** If that CDN is unreachable, the admin does not open, though the shop itself is unaffected.
 - **There is no checkout.** That is a decision, not a gap: see [Shopify versus the catalog](COMPARISON.md).
